@@ -49,7 +49,8 @@ public class CalculadoraDeNotas {
     }
 
     public static double grauFinal(double GA, double GB) {
-        return (GA * 0.33 + GB * 0.67);
+        double result = (GA * 0.33 + GB * 0.67);
+        return Math.round(result * 10) / 10;
     }
 
     public static double grauAFinal(double GA) {
@@ -61,6 +62,7 @@ public class CalculadoraDeNotas {
     }
 
     public static double grauBMinimo(double GA) {
-        return (6.0 - (GA *  0.33)) / 0.67;
+        double meta = (6.0 - (GA *  0.33)) / 0.67;
+        return Math.ceil(meta * 10.0) / 10.0;
     }
 }
